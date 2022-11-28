@@ -58,6 +58,11 @@ namespace ISCareerExploration.Controllers
             return Redirect("https://iscareers.byu.edu/career-explorer#%23skills-explorer-dashboard");
         }
 
+        public IActionResult MyMap()
+        {
+            return Redirect("https://mymap.byu.edu");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
