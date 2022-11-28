@@ -22,6 +22,10 @@ namespace ISCareerExploration.Controllers
         {
             return View();
         }
+        public IActionResult Survey()
+        {
+            return View();
+        }
 
         public IActionResult Resources()
         {
