@@ -1,7 +1,40 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Survey Page";
+    ViewData["Header"] = "Survey";
 }
 
-<h2>This is the page for the survey</h2>
+@*@model SurveyModel;*@
+
+<br />
+
+
+@*SURVEY*@
+<fieldset style="width: 600px;">
+    <form method="post">
+
+        <div asp-validation-summary="All"></div>
+
+        @*<label asp-for="GroupName">Group Name:</label>
+        <br />
+        <input asp-for="GroupName" />
+        <br /><br />*@
+
+        <label style="font-size:16px;">Do you prefer your work to consist mainly of working with people or with technology?</label>
+        <br />
+        <input />
+        <br /><br />
+
+        <label>Which of these scenarios/problems would you most be interested in tackling?</label>
+        <br />
+        <input />
+        <br /><br />
+
+        <label>Do you prefer to work with the same technologies for most of your career or experience frequent change?</label>
+        <br />
+        <input />
+        <br />
+        <br />
+
+        <a class="btn btn-outline-light py-3 px-4 rounded-pill" style="background-color: black;" asp-controller="Home" asp-action="SubmitSurvey">Submit</a>
+    </form>
+</fieldset>

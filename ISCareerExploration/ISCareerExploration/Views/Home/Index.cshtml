@@ -1,17 +1,65 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    @*ViewData["Header"] = "IS Career Exploration";*@
 }
 
-
+<!--<br />
 <div class="hero-image">
     <div class="hero-text">
-
-        <div class="background-image">
-        <img src="~/images/tannerbuilding.JPG" class="card-img-top" alt="...">
-        </div>
-        <h1>IS Career Exploration</h1>
+        <div class="background-image" style="text-align:center;">
+            <img src="~/images/tannerbuilding.JPG" class="card-img-top" style="width:75%;" alt="...">
+        </div>-->
+@*<h1>IS Career Exploration</h1>*@
+<!--<br />
         <p>Click the survey or resource button below to learn more about your possible IS career.</p>
         <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Resources">Resources</a>
         <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Survey">Survey</a>
     </div>
 </div>
+
+<br />
+<br />-->
+
+<br />
+<section class="bg-light">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+            <div class="col-12 col-lg-5">
+                <br />
+                <h2 class="display-4 lh-1 mb-4">IS Career Exploration</h2>
+                <p class="lead fw-normal text-muted mb-5 mb-lg-0">
+                    Choosing which career path to go down can be hard! Click the survey or resource button below to learn more about potential careers in Information Systems.
+                </p>
+                <br />
+            </div>
+            <div class="col-sm-8 col-md-6">
+                <div class="px-5 px-sm-0"><img class="img-fluid rounded-circle" src="~/images/tanner.jpg" alt="..." /></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@*<a class="btn btn-outline-light py-3 px-4 rounded-pill" style="background-color: black;" asp-controller="Home" asp-action="Survey">Take Survey</a>*@
+<br />
+<br />
+
+<div class="container px-5">
+    <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+        <div class="col-12 col-lg-12">
+            <br />
+            <p class="lead fw-normal text-muted mb-5 mb-lg-0" style="font-size:17px;">
+                It is easy to get overwhelmed when looking at all of the different career options within Information Systems. This website will serve as a resource to help you
+                decide on a career path. View our resources and take our Information Systems Career Exploration Survey to get a headstart in the right direction! Please do not ever hesitate to schedule a meeting with your career advisor.
+            </p>
+            <br />
+
+        </div>
+    </div>
+</div>
+
+<br />
+<a class="btn btn-outline-light py-3 px-4 rounded-pill" style="background-color: black;" asp-controller="Home" asp-action="Survey">Take Survey</a>
+@*<br />*@
+<a class="btn btn-outline-light py-3 px-4 rounded-pill" style="background-color: black;" asp-controller="Home" asp-action="Resources">View Resources</a>
+<br />
