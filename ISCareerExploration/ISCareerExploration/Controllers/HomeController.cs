@@ -27,6 +27,11 @@ namespace ISCareerExploration.Controllers
             return View();
         }
 
+        public IActionResult Survey()
+        {
+            return View();
+        }
+
         public IActionResult Resources()
         {
             return View();
@@ -60,6 +65,35 @@ namespace ISCareerExploration.Controllers
         public IActionResult Top10Companies()
         {
             return Redirect("https://iscareers.byu.edu/career-explorer#%23skills-explorer-dashboard");
+        }
+
+        public IActionResult MyMap()
+        {
+            return Redirect("https://mymap.byu.edu");
+        }
+
+        public IActionResult InformationTechnology()
+        {
+            return View();
+        }
+
+        public IActionResult Development()
+        {
+            return View();
+        }
+
+        public IActionResult BusinessIntelligence()
+        {
+            return View();
+        }
+        public IActionResult Management()
+        {
+            return View();
+        }
+
+        public IActionResult Security()
+        {
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
