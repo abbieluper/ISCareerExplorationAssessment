@@ -6,5 +6,7 @@
 
   <ItemGroup>
     <Content Remove="wwwroot\images\" />
+    <Content Remove="Views\Home\Other.cshtml" />
+    <Content Remove="Views\Home\Consulting.cshtml" />
   </ItemGroup>
 </Project>
