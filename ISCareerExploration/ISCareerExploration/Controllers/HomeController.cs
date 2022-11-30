@@ -78,16 +78,24 @@ namespace ISCareerExploration.Controllers
             return View();
         }
 
+
+        public IActionResult Consulting()
+
         public IActionResult BusinessIntelligence()
         {
             return View();
         }
         public IActionResult Management()
+
         {
             return View();
         }
 
+
+        public IActionResult Other()
+
         public IActionResult Security()
+
         {
             return View();
         }
