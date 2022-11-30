@@ -80,6 +80,9 @@ namespace ISCareerExploration.Controllers
 
 
         public IActionResult Consulting()
+        {
+            return View();
+        }
 
         public IActionResult BusinessIntelligence()
         {
@@ -93,6 +96,9 @@ namespace ISCareerExploration.Controllers
 
 
         public IActionResult Other()
+        {
+            return View();
+        }
 
         public IActionResult Security()
 
