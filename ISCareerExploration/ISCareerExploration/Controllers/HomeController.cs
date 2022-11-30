@@ -78,6 +78,16 @@ namespace ISCareerExploration.Controllers
             return View();
         }
 
+        public IActionResult Consulting()
+        {
+            return View();
+        }
+
+        public IActionResult Other()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
