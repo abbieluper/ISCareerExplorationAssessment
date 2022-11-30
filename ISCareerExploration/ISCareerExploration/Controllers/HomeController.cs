@@ -68,6 +68,11 @@ namespace ISCareerExploration.Controllers
             return Redirect("https://mymap.byu.edu");
         }
 
+        public IActionResult InformationTechnology()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
