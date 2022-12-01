@@ -425,56 +425,56 @@ $("#Score_Calc").click(function () {
         Other += 1
     }
 
-            if
-            ((Dev > BI) &&
-            (Dev > Security) &&
-            (Dev > Management) &&
-            (Dev > Consulting) &&
-            (Dev > IT) &&
-            (Dev > Other))
-            {
-                recommendation = "Development"
-            }
+    if
+    ((Dev > BI) &&
+    (Dev > Security) &&
+    (Dev > Management) &&
+    (Dev > Consulting) &&
+    (Dev > IT) &&
+    (Dev > Other))
+    {
+        recommendation = "Development"
+    }
 
-            else if
-            ((BI > Security) &&
-            (BI > Management) &&
-            (BI > Consulting) &&
-            (BI > IT) &&
-            (BI > Other))
-            {
-                recommendation = "Business Intelligence/Analytics"
-            }
-            else if
-            ((Security > Management) &&
-            (Security > Consulting) &&
-            (Security > IT) &&
-            (Security > Other))
-            {
-                recommendation = "Security"
-            }
-            else if
-            ((Management > Consulting) &&
-            (Management > IT) &&
-            (Management > Other))
-            {
-                recommendation = "Management"
-            }
-            else if
-            ((Consulting > IT) &&
-            (Consulting > Other))
-            {
-                recommendation = "Consulting"
-            }
-            else if
-            (IT > Other)
-            {
-                recommendation = "IT"
-            }
-            else
-            {
-                recommendation = "Other"
-            }
+    else if
+    ((BI > Security) &&
+    (BI > Management) &&
+    (BI > Consulting) &&
+    (BI > IT) &&
+    (BI > Other))
+    {
+        recommendation = "Business Intelligence/Analytics"
+    }
+    else if
+    ((Security > Management) &&
+    (Security > Consulting) &&
+    (Security > IT) &&
+    (Security > Other))
+    {
+        recommendation = "Security"
+    }
+    else if
+    ((Management > Consulting) &&
+    (Management > IT) &&
+    (Management > Other))
+    {
+        recommendation = "Management"
+    }
+    else if
+    ((Consulting > IT) &&
+    (Consulting > Other))
+    {
+        recommendation = "Consulting"
+    }
+    else if
+    (IT > Other)
+    {
+        recommendation = "IT"
+    }
+    else
+    {
+        recommendation = "Other"
+    }
 
     document.getElementById("Output").innerHTML = "Your recommendation is: " + recommendation
 })
