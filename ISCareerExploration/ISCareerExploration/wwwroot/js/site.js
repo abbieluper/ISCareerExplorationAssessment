@@ -13,72 +13,87 @@ $("#Score_Calc").click(function () {
     var IT = 0;
     var recommendation = "None";
 
-    if ($("questionOne").val() == "Tableau") {
+   
+
+    if (document.getElementById("questionOne").value == "Tableau") {
         BI += 1
     }
-    else if ($("questionOne").val() == "HTML/CSS") {
+    else if (document.getElementById("questionOneHTML").value == "HTML/CSS") {
         Dev += 1
     }
-    else if ($("questionOne").val() == "VBA") {
+    else if (document.getElementById("questionOneVBA").value == "VBA") {
         Dev += 1
     }
-    else if ($("questionOne").val() == "ERD") {
+    else if (document.getElementById("questionOneERD").value == "ERD") {
         Consulting += 1
     }
-    else if ($("questionOne").val() == "Security") {
+    else if (document.getElementById("questionOneSec").value == "Security") {
         Dev += 1
     }
-    else if ($("questionOne").val() == "BI") {
+    else if (document.getElementById("questionOneBI").value == "BI") {
         BI += 1
     }
     else {
         Other += 1
     }
+    console.log(document.getElementById("questionOneVBA").value)
+    console.log(document.getElementsByName("questionOne").value)
+    console.log(Management)
+    console.log(Other)
+    console.log(Dev)
+    console.log(BI)
+    
 
-    if ($("questionTwo").val() == "Yes") {
+    if (document.getElementById("questionTwo").value == "Yes") {
         Dev += 1
     }
-    else if ($("questionTwo").val() == "No") {
+    else if (document.getElementById("questionTwo").value == "No") {
         Dev += 0
     }
-    else if ($("questionTwo").val() == "NA") {
+    else if (document.getElementById("questionTwo").value == "NA") {
         Dev += 0
     }
     else {
         Other += 1
     }
-    if ($("questionThree").val() == "People") {
+    console.log(document.getElementsByName("questionTwo").value)
+    if (document.getElementById("questionThree").value == "People") {
         Management += 1
     }
-    else if ($("questionThree").val() == "Technology") {
+    else if (document.getElementById("questionThree").value == "Technology") {
         Dev += 1
         BI += 1
         Security += 1
     }
-    else if ($("questionThree").val() == "Both") {
+    else if (document.getElementById("questionThree").value == "Both") {
         IT += 1
         Consulting += 1
     }
     else {
         Other += 1
     }
+    console.log(document.getElementById("questionThree").value)
+    console.log(Management)
+    console.log(Other)
+    console.log(Dev)
+    console.log(BI)
 
-    //if ($("#4").val() == "C#, JavaScript, HTML, CSS"){
+    //if (document.getElementById("questionFour").value == "C#, JavaScript, HTML, CSS"){
     //    Dev += 1
     //}
-    //else if ($("#4").val() == "Encryption, Password Cracking, Penetration Testing"){
+    //else if (document.getElementById("questionFour").value == "Encryption, Password Cracking, Penetration Testing"){
     //    Security += 0
     //}
-    //else if ($("#4").val() == "Organization through Kanban"){
+    //else if (document.getElementById("questionFour").value == "Organization through Kanban"){
     //    Management += 0
     //}
-    //else if ($("#4").val() == "Statistics with Python"){
+    //else if (document.getElementById("questionFour").value == "Statistics with Python"){
     //    Analytics += 0
     //}
-    //else if ($("#4").val() == "Salesforce"){
+    //else if (document.getElementById("questionFour").value == "Salesforce"){
     //    Consulting += 0
     //}
-    //else if ($("#4").val() == "Ticketing Systems (Jira)"){
+    //else if (document.getElementById("questionFour").value == "Ticketing Systems (Jira)"){
     //    IS += 1
     //}
     //else {
@@ -86,45 +101,45 @@ $("#Score_Calc").click(function () {
     //}
     ////need to fix the values here
 
-    //if ($("#5").val() == "Unidentified Error") {
+    //if (document.getElementById("questionFive").value == "Unidentified Error") {
     //    Dev += 1
     //}
-    //else if ($("#5").val() == "Monitoring System"){
+    //else if (document.getElementById("questionFive").value == "Monitoring System"){
     //    Security += 0
     //}
-    //else if ($("#5").val() == "New project"){
+    //else if (document.getElementById("questionFive").value == "New project"){
     //    Management += 0
     //}
-    //else if ($("#5").val() == "Model to predict"){
+    //else if (document.getElementById("questionFive").value == "Model to predict"){
     //    Analytics += 0
     //}
-    //else if ($("#5").val() == "Create a technology"){
+    //else if (document.getElementById("questionFive").value == "Create a technology"){
     //    Consulting += 0
     //}
-    //else if ($("#5").val() == "Troubleshooting"){
+    //else if (document.getElementById("questionFive").value == "Troubleshooting"){
     //    IS += 1
     //}
     //else {
     //    Other += 1
     //}
 
-    //if ($("#6").val() == "Designer/Creator"){
+    //if (document.getElementById("questionSix").value == "Designer/Creator"){
     //    Dev += 1
     //}
-    //else if ($("#6").val() == "Preventer"){
+    //else if (document.getElementById("questionSix").value == "Preventer"){
     //    Security += 1
     //}
-    //else if ($("#6").val() == "Planner"){
+    //else if (document.getElementById("questionSix").value == "Planner"){
     //    Management += 1
     //}
-    //else if ($("#6").val() == "Leader"){
+    //else if (document.getElementById("questionSix").value == "Leader"){
     //    Management += 1
     //}
-    //else if ($("#6").val() == "Problem Solver"){
+    //else if (document.getElementById("questionSix").value == "Problem Solver"){
     //    Consulting += 1
     //    IT += 1
     //}
-    //else if ($("#6").val() == "Analytical"){
+    //else if (document.getElementById("questionSix").value == "Analytical"){
     //    BI += 1
     //}
     //else {
