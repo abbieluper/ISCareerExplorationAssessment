@@ -15,7 +15,7 @@ $("#Score_Calc").click(function () {
 
    
 
-    if (document.getElementById("questionOneTab").checked) {
+    if (document.getElementById("questionOneTableau").checked) {
         BI += 1
     }
     else if (document.getElementById("questionOneHTML").checked) {
@@ -36,12 +36,6 @@ $("#Score_Calc").click(function () {
     else {
         Other += 1
     }
-    console.log(document.getElementById("questionOneVBA").checked)
-    console.log(document.getElementById("questionOneSec").checked)
-    console.log(Management)
-    console.log(Other)
-    console.log(Dev)
-    console.log(BI)
     
 
     if (document.getElementById("questionTwoYes").checked) {
@@ -72,11 +66,7 @@ $("#Score_Calc").click(function () {
     else {
         Other += 1
     }
-    console.log(document.getElementById("questionThree").value)
-    console.log(Management)
-    console.log(Other)
-    console.log(Dev)
-    console.log(BI)
+
 
     if (document.getElementById("questionFourC").checked){
         Dev += 1
@@ -88,7 +78,7 @@ $("#Score_Calc").click(function () {
         Management += 0
     }
     else if (document.getElementById("questionFourStatistics").checked){
-        Analytics += 0
+        BI += 0
     }
     else if (document.getElementById("questionFourSalesforce").checked){
         Consulting += 0
@@ -111,7 +101,7 @@ $("#Score_Calc").click(function () {
         Management += 0
     }
     else if (document.getElementById("questionFiveModel").checked){
-        Analytics += 0
+        BI += 0
     }
     else if (document.getElementById("questionFiveCreate").checked){
         Consulting += 0
@@ -388,11 +378,11 @@ $("#Score_Calc").click(function () {
         Other += 1
     }
 
-    if (document.getElementById("questionTwentyThree").checked){
+    if (document.getElementById("questionTwentyThreeTrue").checked){
         Dev += 1
         Security += 1
     }
-    else if (document.getElementById("questionTwentyThree").checked ){
+    else if (document.getElementById("questionTwentyThreeFalse").checked ){
         Dev += 0
         Security += 1
     }
