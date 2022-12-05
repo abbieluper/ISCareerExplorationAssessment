@@ -430,15 +430,15 @@ $("#Score_Calc").click(function () {
     //    Other += 1
     //}
 
-    //if ($("#27").val() == "True") {
-    //    Security += 1
-    //}
-    //else if ($("#27").val() == "False") {
-    //    Security += 0
-    //}
-    //else {
-    //    Other += 1
-    //}
+    if (document.getElementById(questionTwentySevenTrue).checked() == "True") {
+        Security += 1
+    }
+    else if ($("#27").val() == "False") {
+        Security += 0
+    }
+    else {
+        Other += 1
+    }
 
     //if ($("#28").val() == "True") {
     //    Consulting += 1
