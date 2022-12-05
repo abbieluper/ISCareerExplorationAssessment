@@ -13,49 +13,49 @@ $("#Score_Calc").submit(function Score_Calc() {
     IT = 0
     recommendation = "None"
 
-    if ($("#1".value() = "Tableau")) {
+    if ($("#1").value() = "Tableau") {
         BI += 1
     }
-    else if ($("#1".value() = "HTML/CSS")){
+    else if ($("#1").value() = "HTML/CSS"){
         Dev += 1
     }
-    else if ($("#1".value() = "VBA")){
+    else if ($("#1").value() = "VBA")){
         Dev += 1
     }
-    else if ($("#1".value() = "ERD")){
+    else if ($("#1").value() = "ERD")){
         Consulting += 1
     }
-    else if ($("#1".value() = "Security")){
+    else if ($("#1").value() = "Security")){
         Dev += 1
     }
-    else if ($("#1".value() = "BI")){
+    else if ($("#1").value() = "BI")){
         BI += 1
     }
     else {
         Other += 1
     }
 
-    if ($("#2".value() = "Yes")){
+    if ($("#2").value() = "Yes")){
         Dev += 1
     }
-    else if ($("#2".value() = "No")){
+    else if ($("#2").value() = "No")){
         Dev += 0
     }
-    else if ($("#2".value() = "NA")){
+    else if ($("#2").value() = "NA")){
         Dev += 0
     }
     else {
         Other += 1
     }
-    if ($("#3".value() = "People")){
+    if ($("#3").value() = "People")){
         Management += 1
     }
-    else if ($("#3".value() = "Technology")){
+    else if ($("#3").value() = "Technology")){
         Dev += 1
         BI += 1
         Security += 1
     }
-    else if ($("#3".value() = "Both")){
+    else if ($("#3").value() = "Both")){
         IT += 1
         Consulting += 1
     }
@@ -63,22 +63,22 @@ $("#Score_Calc").submit(function Score_Calc() {
         Other += 1
     }
 
-    if ($("#4".value() = "C#, JavaScript, HTML, CSS")){
+    if ($("#4").value() = "C#, JavaScript, HTML, CSS")){
         Dev += 1
     }
-    else if ($("#4".value() = "Encryption, Password Cracking, Penetration Testing")){
+    else if ($("#4").value() = "Encryption, Password Cracking, Penetration Testing")){
         Security += 0
     }
-    else if ($("#4".value() = "Organization through Kanban")){
+    else if ($("#4").value() = "Organization through Kanban")){
         Management += 0
     }
-    else if ($("#4".value() = "Statistics with Python")){
+    else if ($("#4").value() = "Statistics with Python")){
         Analytics += 0
     }
-    else if ($("#4".value() = "Salesforce")){
+    else if ($("#4").value() = "Salesforce")){
         Consulting += 0
     }
-    else if ($("#4".value() = "Ticketing Systems (Jira)")){
+    else if ($("#4").value() = "Ticketing Systems (Jira)")){
         IS += 1
     }
     else {
@@ -86,57 +86,57 @@ $("#Score_Calc").submit(function Score_Calc() {
     }
     //need to fix the values here
 
-    if ($("#5".value() = "Unidentified Error")) {
+    if ($("#5").value() = "Unidentified Error")) {
         Dev += 1
     }
-    else if ($("#5".value() = "Monitoring System")){
+    else if ($("#5").value() = "Monitoring System")){
         Security += 0
     }
-    else if ($("#5".value() = "New project")){
+    else if ($("#5").value() = "New project")){
         Management += 0
     }
-    else if ($("#5".value() = "Model to predict")){
+    else if ($("#5").value() = "Model to predict")){
         Analytics += 0
     }
-    else if ($("#5".value() = "Create a technology")){
+    else if ($("#5").value() = "Create a technology")){
         Consulting += 0
     }
-    else if ($("#5".value() = "Troubleshooting")){
+    else if ($("#5").value() = "Troubleshooting")){
         IS += 1
     }
     else {
         Other += 1
     }
 
-    if ($("#6".value() = "Designer/Creator")){
+    if ($("#6").value() = "Designer/Creator")){
         Dev += 1
     }
-    else if ($("#6".value() = "Preventer")){
+    else if ($("#6").value() = "Preventer")){
         Security += 1
     }
-    else if ($("#6".value() = "Planner")){
+    else if ($("#6").value() = "Planner")){
         Management += 1
     }
-    else if ($("#6".value() = "Leader")){
+    else if ($("#6").value() = "Leader")){
         Management += 1
     }
-    else if ($("#6".value() = "Problem Solver")){
+    else if ($("#6").value() = "Problem Solver")){
         Consulting += 1
         IT += 1
     }
-    else if ($("#6".value() = "Analytical")){
+    else if ($("#6").value() = "Analytical")){
         BI += 1
     }
     else {
         Other += 1
     }
 
-    if ($("#7".value() = "More Frequent")){
+    if ($("#7").value() = "More Frequent")){
         Dev += 1
         Consulting += 1
         IT += 1
     }
-    else if ($("#7".value() = "Less Frequent")){
+    else if ($("#7").value() = "Less Frequent")){
         Security += 1
         BI += 1
         Management += 1
@@ -145,239 +145,239 @@ $("#Score_Calc").submit(function Score_Calc() {
         Other += 1
     }
 
-    if ($("#8".value() = "Math")){
+    if ($("#8").value() = "Math")){
         BI += 1
     }
-    else if ($("#8".value() = "Innovate")){
+    else if ($("#8").value() = "Innovate")){
         Dev += 1
     }
-    else if ($("#8".value() = "Support")){
+    else if ($("#8").value() = "Support")){
         IT += 1
     }
-    else if ($("#8".value() = "Plan")){
+    else if ($("#8").value() = "Plan")){
         Management += 1
     }
-    else if ($("#8".value() = "Treat")){
+    else if ($("#8").value() = "Treat")){
         Security += 1
     }
-    else if ($("#8".value() = "Manage")){
+    else if ($("#8").value() = "Manage")){
         Management += 1
     }
     else {
         Other += 1
     }
 
-    if ($("#9".value() = "NotInterested")){
+    if ($("#9").value() = "NotInterested")){
         Dev += 0
     }
-    else if ($("#9".value() = "SlightlyInterested")){
+    else if ($("#9").value() = "SlightlyInterested")){
         Dev += 0.25
     }
-    else if ($("#9".value() = "Interested")){
+    else if ($("#9").value() = "Interested")){
         Dev += 0.75
     }
-    else if ($("#9".value() = "ExtremelyInterested")){
+    else if ($("#9").value() = "ExtremelyInterested")){
         Dev += 1
     }
     else {
         Other += 1
     }
 
-    if ($("#10".value() = "NotInterested")){
+    if ($("#10").value() = "NotInterested")){
         Dev += 0
     }
-    else if ($("#10".value() = "SlightlyInterested")){
+    else if ($("#10").value() = "SlightlyInterested")){
         Dev += 0.25
     }
-    else if ($("#10".value() = "Interested")){
+    else if ($("#10").value() = "Interested")){
         Dev += 0.75
     }
-    else if ($("#10".value() = "ExtremelyInterested")){
+    else if ($("#10").value() = "ExtremelyInterested")){
         Dev += 1
     }
     else {
         Other += 1
     }
 
-    if ($("#11".value() = "NotInterested")){
+    if ($("#11").value() = "NotInterested")){
         Consulting += 0
     }
-    else if ($("#11".value() = "SlightlyInterested")){
+    else if ($("#11").value() = "SlightlyInterested")){
         Consulting += 0.25
     }
-    else if ($("#11".value() = "Interested")){
+    else if ($("#11").value() = "Interested")){
         Consulting += 0.75
     }
-    else if ($("#11".value() = "ExtremelyInterested")){
+    else if ($("#11").value() = "ExtremelyInterested")){
         Consulting += 1
     }
     else {
         Other += 1
     }
 
-    if ($("#12".value() = "NotInterested")){
+    if ($("#12").value() = "NotInterested")){
         Dev += 0
     }
-    else if ($("#12".value() = "SlightlyInterested")){
+    else if ($("#12").value() = "SlightlyInterested")){
         Dev += 0.25
     }
-    else if ($("#12".value() = "Interested")){
+    else if ($("#12").value() = "Interested")){
         Dev += 0.75
     }
-    else if ($("#12".value() = "ExtremelyInterested")){
+    else if ($("#12").value() = "ExtremelyInterested")){
         Dev += 1
     }
     else {
         Other += 1
     }
 
-    if ($("#13".value() = "NotInterested")){
+    if ($("#13").value() = "NotInterested")){
         IT += 0
     }
-    else if ($("#13".value() = "SlightlyInterested")){
+    else if ($("#13").value() = "SlightlyInterested")){
         IT += 0.25
     }
-    else if ($("#13".value() = "Interested")){
+    else if ($("#13").value() = "Interested")){
         IT += 0.75
     }
-    else if ($("#13".value() = "ExtremelyInterested")){
+    else if ($("#13").value() = "ExtremelyInterested")){
         IT += 1
     }
     else {
         Other += 1
     }
 
-    if ($("#14".value() = "NotInterested")){
+    if ($("#14").value() = "NotInterested")){
         Management += 0
     }
-    else if ($("#14".value() = "SlightlyInterested")){
+    else if ($("#14").value() = "SlightlyInterested")){
         Management += 0.25
     }
-    else if ($("#14".value() = "Interested")){
+    else if ($("#14").value() = "Interested")){
         Management += 0.75
     }
-    else if ($("#14".value() = "ExtremelyInterested")){
+    else if ($("#14").value() = "ExtremelyInterested")){
         Management += 1
     }
     else {
         Other += 1
     }
 
-    if ($("#15".value() = "NotInterested")){
+    if ($("#15").value() = "NotInterested")){
         Security += 0
     }
-    else if ($("#15".value() = "SlightlyInterested")){
+    else if ($("#15").value() = "SlightlyInterested")){
         Security += 0.25
     }
-    else if ($("#15".value() = "Interested")){
+    else if ($("#15").value() = "Interested")){
         Security += 0.75
     }
-    else if ($("#15".value() = "ExtremelyInterested")){
+    else if ($("#15").value() = "ExtremelyInterested")){
         Security += 1
     }
     else {
         Other += 1
     }
 
-    if ($("#16".value() = "NotInterested")){
+    if ($("#16").value() = "NotInterested")){
         Dev += 0
     }
-    else if ($("#16".value() = "SlightlyInterested")){
+    else if ($("#16").value() = "SlightlyInterested")){
         Dev += 0.25
     }
-    else if ($("#16".value() = "Interested")){
+    else if ($("#16").value() = "Interested")){
         Dev += 0.75
     }
-    else if ($("#16".value() = "ExtremelyInterested")){
+    else if ($("#16").value() = "ExtremelyInterested")){
         Dev += 1
     }
     else {
         Other += 1
     }
 
-    if ($("#17".value() = "NotInterested")){
+    if ($("#17").value() = "NotInterested")){
         Consulting += 0
     }
-    else if ($("#17".value() = "SlightlyInterested")){
+    else if ($("#17").value() = "SlightlyInterested")){
         Consulting += 0.25
     }
-    else if ($("#17".value() = "Interested")){
+    else if ($("#17").value() = "Interested")){
         Consulting += 0.75
     }
-    else if ($("#17".value() = "ExtremelyInterested")){
+    else if ($("#17").value() = "ExtremelyInterested")){
         Consulting += 1
     }
     else {
         Other += 1
     }
 
-    if ($("#18".value() = "NotInterested")){
+    if ($("#18").value() = "NotInterested")){
         BI += 0
     }
-    else if ($("#18".value() = "SlightlyInterested")){
+    else if ($("#18").value() = "SlightlyInterested")){
         BI += 0.25
     }
-    else if ($("#18".value() = "Interested")){
+    else if ($("#18").value() = "Interested")){
         BI += 0.75
     }
-    else if ($("#18".value() = "ExtremelyInterested")){
+    else if ($("#18").value() = "ExtremelyInterested")){
         BI += 1
     }
     else {
         Other += 1
     }
 
-    if ($("#19".value() = "NotInterested")){
+    if ($("#19").value() = "NotInterested")){
         IT += 0
     }
-    else if ($("#19".value() = "SlightlyInterested")){
+    else if ($("#19").value() = "SlightlyInterested")){
         IT += 0.25
     }
-    else if ($("#19".value() = "Interested")){
+    else if ($("#19").value() = "Interested")){
         IT += 0.75
     }
-    else if ($("#19".value() = "ExtremelyInterested")){
+    else if ($("#19").value() = "ExtremelyInterested")){
         IT += 1
     }
     else {
         Other += 1
     }
 
-    if ($("#20".value() = "True")){
+    if ($("#20").value() = "True")){
         BI += 1
     }
-    else if ($("#20".value() = "False")){
+    else if ($("#20").value() = "False")){
         BI += 0
     }
     else {
         Other += 1
     }
 
-    if ($("#21".value() = "True")){
+    if ($("#21").value() = "True")){
         Management += 1
     }
-    else if ($("#21".value() = "False")){
+    else if ($("#21").value() = "False")){
         Management += 0
     }
     else {
         Other += 1
     }
 
-    if ($("#22".value() = "True")){
+    if ($("#22").value() = "True")){
         BI += 1
     }
-    else if ($("#22".value() = "False")){
+    else if ($("#22").value() = "False")){
         BI += 0
     }
     else {
         Other += 1
     }
 
-    if ($("#23".value() = "True")){
+    if ($("#23").value() = "True")){
         Dev += 1
         Security += 1
     }
-    else if ($("#23".value() = "False")){
+    else if ($("#23").value() = "False")){
         Dev += 0
         Security += 1
     }
@@ -385,50 +385,50 @@ $("#Score_Calc").submit(function Score_Calc() {
         Other += 1
     }
 
-    if ($("#24".value() = "True")){
+    if ($("#24").value() = "True")){
         Management += 1
     }
-    else if ($("#24".value() = "False")){
+    else if ($("#24").value() = "False")){
         Management += 0
     }
     else {
         Other += 1
     }
 
-    if ($("#25".value() = "True")){
+    if ($("#25").value() = "True")){
         Management += 1
     }
-    else if ($("#25".value() = "False")){
+    else if ($("#25").value() = "False")){
         Management += 0
     }
     else {
         Other += 1
     }
 
-    if ($("#26".value() = "True")){
+    if ($("#26").value() = "True")){
         BI += 1
     }
-    else if ($("#26".value() = "False")){
+    else if ($("#26").value() = "False")){
         BI += 0
     }
     else {
         Other += 1
     }
 
-    if ($("#27".value() = "True")) {
+    if ($("#27").value() = "True")) {
         Security += 1
     }
-    else if ($("#27".value() = "False")) {
+    else if ($("#27").value() = "False")) {
         Security += 0
     }
     else {
         Other += 1
     }
 
-    if ($("#28".value() = "True")) {
+    if ($("#28").value() = "True")) {
         Consulting += 1
     }
-    else if ($("#28".value() = "False")) {
+    else if ($("#28").value() = "False")) {
         Consulting += 0
     }
     else {
