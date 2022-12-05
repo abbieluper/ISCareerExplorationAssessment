@@ -23,10 +23,18 @@ namespace ISCareerExploration.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult Survey()
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Survey(Result model) // I didn't have to name it model -- I could've named it anything
+        {
+            return View();
+        }
+
 
         public IActionResult Resources()
         {
@@ -105,6 +113,70 @@ namespace ISCareerExploration.Controllers
         {
             return View();
         }
+
+
+
+        //testing for the Survey Results Page
+        //[HttpGet]
+        //public IActionResult Survey()
+        //{
+        //    return View(new Result());
+        //}
+        //[HttpPost]
+        //public IActionResult Survey(Result result)
+        //{
+        //    if
+        //    ((result.Development > result.BusinessIntelligence) &&
+        //    (result.Development > result.Security) &&
+        //    (result.Development > result.Management) &&
+        //    (result.Development > result.Consulting) &&
+        //    (result.Development > result.InformationTechnology) &&
+        //    (result.Development > result.Other))
+        //    {
+        //        return View("Development");
+        //    }
+
+        //    else if
+        //    ((result.BusinessIntelligence > result.Security) &&
+        //    (result.BusinessIntelligence > result.Management) &&
+        //    (result.BusinessIntelligence > result.Consulting) &&
+        //    (result.BusinessIntelligence > result.InformationTechnology) &&
+        //    (result.BusinessIntelligence > result.Other))
+        //    {
+        //        return View("BusinessIntelligence");
+        //    }
+        //    else if
+        //    ((result.Security > result.Management) &&
+        //    (result.Security > result.Consulting) &&
+        //    (result.Security > result.InformationTechnology) &&
+        //    (result.Security > result.Other))
+        //    {
+        //        return View("Security");
+        //    }
+        //    else if
+        //    ((result.Management > result.Consulting) &&
+        //    (result.Management > result.InformationTechnology) &&
+        //    (result.Management > result.Other))
+        //    {
+        //        return View("Management");
+        //    }
+        //    else if
+        //    ((result.Consulting > result.InformationTechnology) &&
+        //    (result.Consulting > result.Other))
+        //    {
+        //        return View("Consulting");
+        //    }
+        //    else if
+        //    (result.InformationTechnology > result.Other)
+        //    {
+        //        return View("InformationTechnology");
+        //    }
+        //    else
+        //    {
+        //        return View("Other");
+        //    }
+
+        //}
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

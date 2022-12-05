@@ -2,68 +2,551 @@
     ViewData["Title"] = "Survey Page";
     ViewData["Header"] = "Survey";
 }
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
 
-@*@model SurveyModel;*@
+@model Result;
 
 <br />
+
+@*<script type="text/javascript">
+   function Score_Calc() {
+        BI = 0
+        Dev = 0
+        Other = 0
+        Consulting = 0
+        Management = 0
+        Security = 0
+        IT = 0
+        recommendation = "None"
+
+        if ($("#1").val() = "Tableau") {
+            BI += 1
+        }
+        else if ($("#1").val() = "HTML/CSS") {
+            Dev += 1
+        }
+        else if ($("#1").val() = "VBA") {
+            Dev += 1
+        }
+        else if ($("#1").val() = "ERD") {
+            Consulting += 1
+        }
+        else if ($("#1").val() = "Security") {
+            Dev += 1
+        }
+        else if ($("#1").val() = "BI") {
+            BI += 1
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#2").val() = "Yes") {
+            Dev += 1
+        }
+        else if ($("#2").val() = "No") {
+            Dev += 0
+        }
+        else if ($("#2").val() = "NA") {
+            Dev += 0
+        }
+        else {
+            Other += 1
+        }
+        if ($("#3").val() = "People") {
+            Management += 1
+        }
+        else if ($("#3").val() = "Technology") {
+            Dev += 1
+            BI += 1
+            Security += 1
+        }
+        else if ($("#3").val() = "Both") {
+            IT += 1
+            Consulting += 1
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#4").val() = "C#, JavaScript, HTML, CSS") {
+            Dev += 1
+        }
+        else if ($("#4").val() = "Encryption, Password Cracking, Penetration Testing") {
+            Security += 0
+        }
+        else if ($("#4").val() = "Organization through Kanban") {
+            Management += 0
+        }
+        else if ($("#4").val() = "Statistics with Python") {
+            Analytics += 0
+        }
+        else if ($("#4").val() = "Salesforce") {
+            Consulting += 0
+        }
+        else if ($("#4").val() = "Ticketing Systems (Jira)") {
+            IS += 1
+        }
+        else {
+            Other += 1
+        }
+        //need to fix the values here
+
+        if ($("#5").val() = "Unidentified Error") {
+            Dev += 1
+        }
+        else if ($("#5").val() = "Monitoring System") {
+            Security += 0
+        }
+        else if ($("#5").val() = "New project") {
+            Management += 0
+        }
+        else if ($("#5").val() = "Model to predict") {
+            Analytics += 0
+        }
+        else if ($("#5").val() = "Create a technology") {
+            Consulting += 0
+        }
+        else if ($("#5").val() = "Troubleshooting") {
+            IS += 1
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#6").val() = "Designer/Creator") {
+            Dev += 1
+        }
+        else if ($("#6").val() = "Preventer") {
+            Security += 1
+        }
+        else if ($("#6").val() = "Planner") {
+            Management += 1
+        }
+        else if ($("#6").val() = "Leader") {
+            Management += 1
+        }
+        else if ($("#6").val() = "Problem Solver") {
+            Consulting += 1
+            IT += 1
+        }
+        else if ($("#6").val() = "Analytical") {
+            BI += 1
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#7").val() = "More Frequent") {
+            Dev += 1
+            Consulting += 1
+            IT += 1
+        }
+        else if ($("#7").val() = "Less Frequent") {
+            Security += 1
+            BI += 1
+            Management += 1
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#8").val() = "Math") {
+            BI += 1
+        }
+        else if ($("#8").val() = "Innovate") {
+            Dev += 1
+        }
+        else if ($("#8").val() = "Support") {
+            IT += 1
+        }
+        else if ($("#8").val() = "Plan") {
+            Management += 1
+        }
+        else if ($("#8").val() = "Treat") {
+            Security += 1
+        }
+        else if ($("#8").val() = "Manage") {
+            Management += 1
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#9").val() = "NotInterested") {
+            Dev += 0
+        }
+        else if ($("#9").val() = "SlightlyInterested") {
+            Dev += 0.25
+        }
+        else if ($("#9").val() = "Interested") {
+            Dev += 0.75
+        }
+        else if ($("#9").val() = "ExtremelyInterested") {
+            Dev += 1
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#10").val() = "NotInterested") {
+            Dev += 0
+        }
+        else if ($("#10").val() = "SlightlyInterested") {
+            Dev += 0.25
+        }
+        else if ($("#10").val() = "Interested") {
+            Dev += 0.75
+        }
+        else if ($("#10").val() = "ExtremelyInterested") {
+            Dev += 1
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#11").val() = "NotInterested") {
+            Consulting += 0
+        }
+        else if ($("#11").val() = "SlightlyInterested") {
+            Consulting += 0.25
+        }
+        else if ($("#11").val() = "Interested") {
+            Consulting += 0.75
+        }
+        else if ($("#11").val() = "ExtremelyInterested") {
+            Consulting += 1
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#12").val() = "NotInterested") {
+            Dev += 0
+        }
+        else if ($("#12").val() = "SlightlyInterested") {
+            Dev += 0.25
+        }
+        else if ($("#12").val() = "Interested") {
+            Dev += 0.75
+        }
+        else if ($("#12").val() = "ExtremelyInterested") {
+            Dev += 1
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#13").val() = "NotInterested") {
+            IT += 0
+        }
+        else if ($("#13").val() = "SlightlyInterested") {
+            IT += 0.25
+        }
+        else if ($("#13").val() = "Interested") {
+            IT += 0.75
+        }
+        else if ($("#13").val() = "ExtremelyInterested") {
+            IT += 1
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#14").val() = "NotInterested") {
+            Management += 0
+        }
+        else if ($("#14").val() = "SlightlyInterested") {
+            Management += 0.25
+        }
+        else if ($("#14").val() = "Interested") {
+            Management += 0.75
+        }
+        else if ($("#14").val() = "ExtremelyInterested") {
+            Management += 1
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#15").val() = "NotInterested") {
+            Security += 0
+        }
+        else if ($("#15").val() = "SlightlyInterested") {
+            Security += 0.25
+        }
+        else if ($("#15").val() = "Interested") {
+            Security += 0.75
+        }
+        else if ($("#15").val() = "ExtremelyInterested") {
+            Security += 1
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#16").val() = "NotInterested") {
+            Dev += 0
+        }
+        else if ($("#16").val() = "SlightlyInterested") {
+            Dev += 0.25
+        }
+        else if ($("#16").val() = "Interested") {
+            Dev += 0.75
+        }
+        else if ($("#16").val() = "ExtremelyInterested") {
+            Dev += 1
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#17").val() = "NotInterested") {
+            Consulting += 0
+        }
+        else if ($("#17").val() = "SlightlyInterested") {
+            Consulting += 0.25
+        }
+        else if ($("#17").val() = "Interested") {
+            Consulting += 0.75
+        }
+        else if ($("#17").val() = "ExtremelyInterested") {
+            Consulting += 1
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#18").val() = "NotInterested") {
+            BI += 0
+        }
+        else if ($("#18").val() = "SlightlyInterested") {
+            BI += 0.25
+        }
+        else if ($("#18").val() = "Interested") {
+            BI += 0.75
+        }
+        else if ($("#18").val() = "ExtremelyInterested") {
+            BI += 1
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#19").val() = "NotInterested") {
+            IT += 0
+        }
+        else if ($("#19").val() = "SlightlyInterested") {
+            IT += 0.25
+        }
+        else if ($("#19").val() = "Interested") {
+            IT += 0.75
+        }
+        else if ($("#19").val() = "ExtremelyInterested") {
+            IT += 1
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#20").val() = "True") {
+            BI += 1
+        }
+        else if ($("#20").val() = "False") {
+            BI += 0
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#21").val() = "True") {
+            Management += 1
+        }
+        else if ($("#21").val() = "False") {
+            Management += 0
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#22").val() = "True") {
+            BI += 1
+        }
+        else if ($("#22").val() = "False") {
+            BI += 0
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#23").val() = "True") {
+            Dev += 1
+            Security += 1
+        }
+        else if ($("#23").val() = "False") {
+            Dev += 0
+            Security += 1
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#24").val() = "True") {
+            Management += 1
+        }
+        else if ($("#24").val() = "False") {
+            Management += 0
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#25").val() = "True") {
+            Management += 1
+        }
+        else if ($("#25").val() = "False") {
+            Management += 0
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#26").val() = "True") {
+            BI += 1
+        }
+        else if ($("#26").val() = "False") {
+            BI += 0
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#27").val() = "True") {
+            Security += 1
+        }
+        else if ($("#27").val() = "False") {
+            Security += 0
+        }
+        else {
+            Other += 1
+        }
+
+        if ($("#28").val() = "True") {
+            Consulting += 1
+        }
+        else if ($("#28").val() = "False") {
+            Consulting += 0
+        }
+        else {
+            Other += 1
+        }
+
+        if
+            ((Dev > BI) &&
+            (Dev > Security) &&
+            (Dev > Management) &&
+            (Dev > Consulting) &&
+            (Dev > IT) &&
+            (Dev > Other)) {
+            recommendation = "Development"
+        }
+
+        else if
+            ((BI > Security) &&
+            (BI > Management) &&
+            (BI > Consulting) &&
+            (BI > IT) &&
+            (BI > Other)) {
+            recommendation = "Business Intelligence/Analytics"
+        }
+        else if
+            ((Security > Management) &&
+            (Security > Consulting) &&
+            (Security > IT) &&
+            (Security > Other)) {
+            recommendation = "Security"
+        }
+        else if
+            ((Management > Consulting) &&
+            (Management > IT) &&
+            (Management > Other)) {
+            recommendation = "Management"
+        }
+        else if
+            ((Consulting > IT) &&
+            (Consulting > Other)) {
+            recommendation = "Consulting"
+        }
+        else if
+            (IT > Other) {
+            recommendation = "IT"
+        }
+        else {
+            recommendation = "Other"
+        }
+
+        document.getElementById("Output").innerHTML = "Your recommendation is: " + recommendation
+    }
+    )
+</script>*@
 
 
 @*SURVEY*@
 <fieldset style="width: 700px;">
-    <form style="background-color: #F4F4F4; padding-left:18%; padding-top:10%;opacity: 0.8; width: 1100px; margin-bottom: auto; margin-left: auto; margin-right: auto; border-radius: 20px;" method="post">
+    <form onsubmit="return false;" style="background-color: #F4F4F4; padding-left:18%; padding-top:10%;opacity: 0.8; width: 1100px; margin-bottom: auto; margin-left: auto; margin-right: auto; border-radius: 20px;" method="post">
 
         <div asp-validation-summary="All"></div>
 
         @*#1*@
         <label style="font-size:16px; font-weight:bold;">What was your favorite part of IS 201?</label>
         <br />
-        <input id="1" type="radio" name="1" value="Tableau" />
-        <label for="1">Tableau</label>
+        <input id="questionOneTableau" type="radio" name="questionOne" value="Tableau" />
+        <label for="questionOne">Tableau</label>
         <br />
-        <input id="1" type="radio" name="1" value="HTML/CSS" />
-        <label for="1">HTML/CSS</label>
+        <input id="questionOneHTML" type="radio" name="questionOne" value="HTML/CSS" />
+        <label for="questionOne">HTML/CSS</label>
         <br />
-        <input id="1" type="radio" name="1" value="VBA" />
-        <label for="1">VBA</label>
+        <input id="questionOneVBA" type="radio" name="questionOne" value="VBA" />
+        <label for="questionOne">VBA</label>
         <br />
-        <input id="1" type="radio" name="1" value="ERD" />
-        <label for="1">Building ERD's</label>
+        <input id="questionOneERD" type="radio" name="questionOne" value="ERD" />
+        <label for="questionOne">Building ERD's</label>
         <br />
-        <input id="1" type="radio" name="1" value="Security" />
-        <label for="1">Security and Privacy</label>
+        <input id="questionOneSec" type="radio" name="questionOne" value="Security" />
+        <label for="questionOne">Security and Privacy</label>
         <br />
-        <input id="1" type="radio" name="1" value="BI" />
-        <label for="1">Business Intelligence (Data Visualizations, Analytics, Solver)</label>
+        <input id="questionOneBI" type="radio" name="questionOne" value="BI" />
+        <label for="questionOne">Business Intelligence (Data Visualizations, Analytics, Solver)</label>
         <br />
-        <input id="1" type="radio" name="1" value="NA" />
-        <label for="1">Haven't taken IS 201</label>
+        <input id="questionOneNA" type="radio" name="questionOne" value="NA" />
+        <label for="questionOne">Haven't taken IS 201</label>
         <br />
         <br />
 
         @*#2*@
         <label style="font-size: 16px; font-weight: bold;">Did you enjoy IS 303 or CS 142?</label>
         <br />
-        <input id="2" type="radio" name="2" value="Yes" />
+        <input id="questionTwoYes" type="radio" name="questionTwo" value="Yes" />
         <label for="2">Yes</label>
         <br />
-        <input id="2" type="radio" name="2" value="No" />
+        <input id="questionTwoNo" type="radio" name="questionTwo" value="No" />
         <label for="2">No</label>
         <br />
-        <input id="2" type="radio" name="2" value="NA" />
+        <input id="questionTwoNA" type="radio" name="questionTwo" value="NA" />
         <label for="2">Haven't taken either</label>
         <br />
         <br />
 
-        @*#3*@
+        @*#3this is bringing back a weird number*@
         <label style="font-size: 16px; font-weight: bold;">Do you prefer your work to consist mostly of working with people or with technology?</label>
         <br />
-        <input id="3" type="radio" name="3" value="People" />
+        <input id="questionThreePeople" type="radio" name="questionThree" value="People" />
         <label for="3">People</label>
         <br />
-        <input id="3" type="radio" name="3" value="Technology" />
+        <input id="questionThreeTechnology" type="radio" name="questionThree" value="Technology" />
         <label for="3">Technology</label>
         <br />
-        <input id="3" type="radio" name="3" value="Both" />
+        <input id="questionThreeBoth" type="radio" name="questionThree" value="Both" />
         <label for="3">Mix of both</label>
         <br />
         <br />
@@ -71,22 +554,22 @@
         @*#4*@
         <label style="font-size: 16px; font-weight: bold;">What technologies interest you the most?</label>
         <br />
-        <input id="4" type="radio" name="4" value="C#, JavaScript, HTML, CSS" />
+        <input id="questionFourC" type="radio" name="4" value="C#, JavaScript, HTML, CSS" />
         <label for="4">C#, JavaScript, HTML, CSS</label>
         <br />
-        <input id="4" type="radio" name="4" value="Encryption, Password Cracking, Penetration Testing" />
+        <input id="questionFourEncryption" type="radio" name="4" value="Encryption, Password Cracking, Penetration Testing" />
         <label for="4">Encryption, Password Cracking, Penetration Testing</label>
         <br />
-        <input id="4" type="radio" name="4" value="Organization through Kanban" />
+        <input id="questionFourOrganization" type="radio" name="4" value="Organization through Kanban" />
         <label for="4">Organization through Kanban</label>
         <br />
-        <input id="4" type="radio" name="4" value="Statistics with Python" />
+        <input id="questionFourStatistics" type="radio" name="4" value="Statistics with Python" />
         <label for="4">Statistics with Python</label>
         <br />
-        <input id="4" type="radio" name="4" value="Salesforce" />
+        <input id="questionFourSalesforce" type="radio" name="4" value="Salesforce" />
         <label for="4">Salesforce</label>
         <br />
-        <input id="4" type="radio" name="4" value="Ticketing Systems (Jira)" />
+        <input id="questionFourTicketing" type="radio" name="4" value="Ticketing Systems (Jira)" />
         <label for="4">Ticketing Systems (Jira)</label>
         <br />
         <br />
@@ -94,22 +577,22 @@
         @*#5*@
         <label style="font-size: 16px; font-weight: bold;">Which of these scenarios/problems would you most be interested in tackling?</label>
         <br />
-        <input id="5" type="radio" name="5" value="Unidentified Error" />
+        <input id="questionFiveUnidentified" type="radio" name="5" value="Unidentified Error" />
         <label for="5">Code is throwing an unidentified error</label>
         <br />
-        <input id="5" type="radio" name="5" value="Monitoring System" />
+        <input id="questionFiveMonitoring" type="radio" name="5" value="Monitoring System" />
         <label for="5">A monitoring system throwing an alert for secure information being accessed</label>
         <br />
-        <input id="5" type="radio" name="5" value="New project" />
+        <input id="questionFiveNew" type="radio" name="5" value="New project" />
         <label for="5">A company has a new project that needs requirements created and planned</label>
         <br />
-        <input id="5" type="radio" name="5" value="Model to predict" />
+        <input id="questionFiveModel" type="radio" name="5" value="Model to predict" />
         <label for="5">Creating a model to predict whether or not customers will use a product based on set features</label>
         <br />
-        <input id="5" type="radio" name="5" value="Create a technology" />
+        <input id="questionFiveCreate" type="radio" name="5" value="Create a technology" />
         <label for="5">Working with a company to create a technology that fits their needs</label>
         <br />
-        <input id="5" type="radio" name="5" value="Troubleshooting" />
+        <input id="questionFiveTroubleshooting" type="radio" name="5" value="Troubleshooting" />
         <label for="5">Troubleshooting issues with the company website </label>
         <br />
         <br />
@@ -117,22 +600,22 @@
         @*#6*@
         <label style="font-size: 16px; font-weight: bold;">What word best describes you?</label>
         <br />
-        <input id="6" type="radio" name="6" value="Designer/Creator" />
+        <input id="questionSixDesigner" type="radio" name="6" value="Designer/Creator" />
         <label for="6">Designer/Creator</label>
         <br />
-        <input id="6" type="radio" name="6" value="Preventer" />
+        <input id="questionSixPreventer" type="radio" name="6" value="Preventer" />
         <label for="6">Preventer</label>
         <br />
-        <input id="6" type="radio" name="6" value="Planner" />
+        <input id="questionSixPlanner" type="radio" name="6" value="Planner" />
         <label for="6">Planner</label>
         <br />
-        <input id="6" type="radio" name="6" value="Leader" />
+        <input id="questionSixLeader" type="radio" name="6" value="Leader" />
         <label for="6">Leader</label>
         <br />
-        <input id="6" type="radio" name="6" value="Problem Solver" />
+        <input id="questionSixProblem" type="radio" name="6" value="Problem Solver" />
         <label for="6">Problem Solver</label>
         <br />
-        <input id="6" type="radio" name="6" value="Analytical" />
+        <input id="questionSixAnalytical" type="radio" name="6" value="Analytical" />
         <label for="6">Analytical</label>
         <br />
         <br />
@@ -140,10 +623,10 @@
         @*#7*@
         <label style="font-size: 16px; font-weight: bold;">Would you prefer more or less frequent change when working with technologies in your career?</label>
         <br />
-        <input id="7" type="radio" name="7" value="More Frequent" />
+        <input id="questionSevenMore" type="radio" name="7" value="More Frequent" />
         <label for="7">More Frequent</label>
         <br />
-        <input id="7" type="radio" name="7" value="Less Frequent" />
+        <input id="questionSevenLess" type="radio" name="7" value="Less Frequent" />
         <label for="7">Less Frequent</label>
         <br />
         <br />
@@ -151,22 +634,22 @@
         @*#8*@
         <label style="font-size: 16px; font-weight: bold;">Which of the following activities do you enjoy the most?</label>
         <br />
-        <input id="8" type="radio" name="8" value="Math" />
+        <input id="questionEightMath" type="radio" name="8" value="Math" />
         <label for="8">Use Math and Calculations</label>
         <br />
-        <input id="8" type="radio" name="8" value="Innovate" />
+        <input id="questionEightInnovate" type="radio" name="8" value="Innovate" />
         <label for="8">Innovate and Create</label>
         <br />
-        <input id="8" type="radio" name="8" value="Support" />
+        <input id="questionEightSupport" type="radio" name="8" value="Support" />
         <label for="8">Support and Assist</label>
         <br />
-        <input id="8" type="radio" name="8" value="Plan" />
+        <input id="questionEightPlan" type="radio" name="8" value="Plan" />
         <label for="8">Plan and Organize</label>
         <br />
-        <input id="8" type="radio" name="8" value="Treat" />
+        <input id="questionEightTreat" type="radio" name="8" value="Treat" />
         <label for="8">Treat and Cure</label>
         <br />
-        <input id="8" type="radio" name="8" value="Manage" />
+        <input id="questionEightManage" type="radio" name="8" value="Manage" />
         <label for="8">Manage and Supervise</label>
         <br />
         <br />
@@ -178,16 +661,16 @@
         @*#9*@
         <label style="font-size: 16px; font-weight: bold;">Utilizing artistic abilities</label>
         <br />
-        <input id="9" type="radio" name="9" value="NotInterested" />
+        <input id="questionNineNot" type="radio" name="9" value="NotInterested" />
         <label for="9">Not Interested</label>
         <br />
-        <input id="9" type="radio" name="9" value="SlightlyInterested" />
+        <input id="questionNineSlightly" type="radio" name="9" value="SlightlyInterested" />
         <label for="9">Slightly Interested</label>
         <br />
-        <input id="9" type="radio" name="9" value="Interested" />
+        <input id="questionNineInterested" type="radio" name="9" value="Interested" />
         <label for="9">Interested</label>
         <br />
-        <input id="9" type="radio" name="9" value="ExtremelyInterested" />
+        <input id="questionNineExtremely" type="radio" name="9" value="ExtremelyInterested" />
         <label for="9">Extremely Interested</label>
         <br />
         <br />
@@ -195,16 +678,16 @@
         @*#10*@
         <label style="font-size: 16px; font-weight: bold;">Build a Mobile App</label>
         <br />
-        <input id="10" type="radio" name="10" value="NotInterested" />
+        <input id="questionTenNot" type="radio" name="10" value="NotInterested" />
         <label for="10">Not Interested</label>
         <br />
-        <input id="10" type="radio" name="10" value="SlightlyInterested" />
+        <input id="questionTenSlightly" type="radio" name="10" value="SlightlyInterested" />
         <label for="10">Slightly Interested</label>
         <br />
-        <input id="10" type="radio" name="10" value="Interested" />
+        <input id="questionTenInterested" type="radio" name="10" value="Interested" />
         <label for="10">Interested</label>
         <br />
-        <input id="10" type="radio" name="10" value="ExtremelyInterested" />
+        <input id="questionTenExtremely" type="radio" name="10" value="ExtremelyInterested" />
         <label for="10">Extremely Interested</label>
         <br />
         <br />
@@ -212,16 +695,16 @@
         @*#11*@
         <label style="font-size: 16px; font-weight: bold;">Review data and present your findings to a team</label>
         <br />
-        <input id="11" type="radio" name="11" value="NotInterested" />
+        <input id="questionElevenNot" type="radio" name="11" value="NotInterested" />
         <label for="11">Not Interested</label>
         <br />
-        <input id="11" type="radio" name="11" value="SlightlyInterested" />
+        <input id="questionElevenSlightly" type="radio" name="11" value="SlightlyInterested" />
         <label for="11">Slightly Interested</label>
         <br />
-        <input id="11" type="radio" name="11" value="Interested" />
+        <input id="questionElevenInterested" type="radio" name="11" value="Interested" />
         <label for="11">Interested</label>
         <br />
-        <input id="11" type="radio" name="11" value="ExtremelyInterested" />
+        <input id="questionElevenExtremely" type="radio" name="11" value="ExtremelyInterested" />
         <label for="11">Extremely Interested</label>
         <br />
         <br />
@@ -229,16 +712,16 @@
         @*#12*@
         <label style="font-size: 16px; font-weight: bold;">Create and design graphics</label>
         <br />
-        <input id="12" type="radio" name="12" value="NotInterested" />
+        <input id="questionTwelveNot" type="radio" name="12" value="NotInterested" />
         <label for="12">Not Interested</label>
         <br />
-        <input id="12" type="radio" name="12" value="SlightlyInterested" />
+        <input id="questionTwelveSlightly" type="radio" name="12" value="SlightlyInterested" />
         <label for="12">Slightly Interested</label>
         <br />
-        <input id="12" type="radio" name="12" value="Interested" />
+        <input id="questionTwelveInterested" type="radio" name="12" value="Interested" />
         <label for="12">Interested</label>
         <br />
-        <input id="12" type="radio" name="12" value="ExtremelyInterested" />
+        <input id="questionTwelveExtremely" type="radio" name="12" value="ExtremelyInterested" />
         <label for="12">Extremely Interested</label>
         <br />
         <br />
@@ -247,16 +730,16 @@
         @*#13*@
         <label style="font-size: 16px; font-weight: bold;">Support others in their ability to utilize technology devices</label>
         <br />
-        <input id="13" type="radio" name="13" value="NotInterested" />
+        <input id="questionThirteenNot" type="radio" name="13" value="NotInterested" />
         <label for="13">Not Interested</label>
         <br />
-        <input id="13" type="radio" name="13" value="SlightlyInterested" />
+        <input id="questionThirteenSlightly" type="radio" name="13" value="SlightlyInterested" />
         <label for="13">Slightly Interested</label>
         <br />
-        <input id="13" type="radio" name="13" value="Interested" />
+        <input id="questionThirteenInterested" type="radio" name="13" value="Interested" />
         <label for="13">Interested</label>
         <br />
-        <input id="13" type="radio" name="13" value="ExtremelyInterested" />
+        <input id="questionThirteenExtremely" type="radio" name="13" value="ExtremelyInterested" />
         <label for="13">Extremely Interested</label>
         <br />
         <br />
@@ -265,16 +748,16 @@
         @*#14*@
         <label style="font-size: 16px; font-weight: bold;">Lead a team to complete projects</label>
         <br />
-        <input id="14" type="radio" name="14" value="NotInterested" />
+        <input id="questionFourteenNot" type="radio" name="14" value="NotInterested" />
         <label for="14">Not Interested</label>
         <br />
-        <input id="14" type="radio" name="14" value="SlightlyInterested" />
+        <input id="questionFourteenSlightly" type="radio" name="14" value="SlightlyInterested" />
         <label for="14">Slightly Interested</label>
         <br />
-        <input id="14" type="radio" name="14" value="Interested" />
+        <input id="questionFourteenInterested" type="radio" name="14" value="Interested" />
         <label for="14">Interested</label>
         <br />
-        <input id="14" type="radio" name="14" value="ExtremelyInterested" />
+        <input id="questionFourteenExtremely" type="radio" name="14" value="ExtremelyInterested" />
         <label for="14">Extremely Interested</label>
         <br />
         <br />
@@ -284,16 +767,16 @@
         @*#15*@
         <label style="font-size: 16px; font-weight: bold;">Monitoring a companies security checkpoints</label>
         <br />
-        <input id="15" type="radio" name="15" value="NotInterested" />
+        <input id="questionFifteenNot" type="radio" name="15" value="NotInterested" />
         <label for="15">Not Interested</label>
         <br />
-        <input id="15" type="radio" name="15" value="SlightlyInterested" />
+        <input id="questionFifteenSlightly" type="radio" name="15" value="SlightlyInterested" />
         <label for="15">Slightly Interested</label>
         <br />
-        <input id="15" type="radio" name="15" value="Interested" />
+        <input id="questionFifteenInterested" type="radio" name="15" value="Interested" />
         <label for="15">Interested</label>
         <br />
-        <input id="15" type="radio" name="15" value="ExtremelyInterested" />
+        <input id="questionFifteenExtremely" type="radio" name="15" value="ExtremelyInterested" />
         <label for="15">Extremely Interested</label>
         <br />
         <br />
@@ -302,16 +785,16 @@
         @*#16*@
         <label style="font-size: 16px; font-weight: bold;">Create a database from scratch for a company</label>
         <br />
-        <input id="16" type="radio" name="16" value="NotInterested" />
+        <input id="questionSixteenNot" type="radio" name="16" value="NotInterested" />
         <label for="16">Not Interested</label>
         <br />
-        <input id="16" type="radio" name="16" value="SlightlyInterested" />
+        <input id="questionSixteenSlightly" type="radio" name="16" value="SlightlyInterested" />
         <label for="16">Slightly Interested</label>
         <br />
-        <input id="16" type="radio" name="16" value="Interested" />
+        <input id="questionSixteenInterested" type="radio" name="16" value="Interested" />
         <label for="16">Interested</label>
         <br />
-        <input id="16" type="radio" name="16" value="ExtremelyInterested" />
+        <input id="questionSixteenExtremely" type="radio" name="16" value="ExtremelyInterested" />
         <label for="16">Extremely Interested</label>
         <br />
         <br />
@@ -319,16 +802,16 @@
         @*#17*@
         <label style="font-size: 16px; font-weight: bold;">Participate in business strategy sessions</label>
         <br />
-        <input id="17" type="radio" name="17" value="NotInterested" />
+        <input id="questionSeventeenNot" type="radio" name="17" value="NotInterested" />
         <label for="17">Not Interested</label>
         <br />
-        <input id="17" type="radio" name="17" value="SlightlyInterested" />
+        <input id="questionSeventeenSlightly" type="radio" name="17" value="SlightlyInterested" />
         <label for="17">Slightly Interested</label>
         <br />
-        <input id="17" type="radio" name="17" value="Interested" />
+        <input id="questionSeventeenInterested" type="radio" name="17" value="Interested" />
         <label for="17">Interested</label>
         <br />
-        <input id="17" type="radio" name="17" value="ExtremelyInterested" />
+        <input id="questionSeventeenExtremely" type="radio" name="17" value="ExtremelyInterested" />
         <label for="17">Extremely Interested</label>
         <br />
         <br />
@@ -336,16 +819,16 @@
         @*#18*@
         <label style="font-size: 16px; font-weight: bold;">Analyze data from a sports team</label>
         <br />
-        <input id="18" type="radio" name="18" value="NotInterested" />
+        <input id="questionEightteenNot" type="radio" name="18" value="NotInterested" />
         <label for="18">Not Interested</label>
         <br />
-        <input id="18" type="radio" name="18" value="SlightlyInterested" />
+        <input id="questionEightteenSlightly" type="radio" name="18" value="SlightlyInterested" />
         <label for="18">Slightly Interested</label>
         <br />
-        <input id="18" type="radio" name="18" value="Interested" />
+        <input id="questionEightteenInterested" type="radio" name="18" value="Interested" />
         <label for="18">Interested</label>
         <br />
-        <input id="18" type="radio" name="18" value="ExtremelyInterested" />
+        <input id="questionEightteenExtremely" type="radio" name="18" value="ExtremelyInterested" />
         <label for="18">Extremely Interested</label>
         <br />
         <br />
@@ -353,16 +836,16 @@
         @*#19*@
         <label style="font-size: 16px; font-weight: bold;">Recommend software and hardware improvements to a company</label>
         <br />
-        <input id="19" type="radio" name="19" value="NotInterested" />
+        <input id="questionNineteenNot" type="radio" name="19" value="NotInterested" />
         <label for="19">Not Interested</label>
         <br />
-        <input id="19" type="radio" name="19" value="SlightlyInterested" />
+        <input id="questionNineteenSlightly" type="radio" name="19" value="SlightlyInterested" />
         <label for="19">Slightly Interested</label>
         <br />
-        <input id="19" type="radio" name="19" value="Interested" />
+        <input id="questionNineteenInterested" type="radio" name="19" value="Interested" />
         <label for="19">Interested</label>
         <br />
-        <input id="19" type="radio" name="19" value="ExtremelyInterested" />
+        <input id="questionNineteenExtremely" type="radio" name="19" value="ExtremelyInterested" />
         <label for="19">Extremely Interested</label>
         <br />
         <br />
@@ -370,10 +853,10 @@
         @*#20*@
         <label style="font-size: 16px; font-weight: bold;">I easily find patterns in things around me</label>
         <br />
-        <input id="20" type="radio" name="20" value="True" />
+        <input id="questionTwentyTrue" type="radio" name="20" value="True" />
         <label for="20">True</label>
         <br />
-        <input id="20" type="radio" name="20" value="False" />
+        <input id="questionTwentyFalse" type="radio" name="20" value="False" />
         <label for="20">False</label>
         <br />
         <br />
@@ -381,10 +864,10 @@
         @*#21*@
         <label style="font-size: 16px; font-weight: bold;">I work better in a team</label>
         <br />
-        <input id="21" type="radio" name="21" value="True" />
+        <input id="questionTwentyOneTrue" type="radio" name="21" value="True" />
         <label for="21">True</label>
         <br />
-        <input id="21" type="radio" name="21" value="False" />
+        <input id="questionTwentyOneFalse" type="radio" name="21" value="False" />
         <label for="21">False</label>
         <br />
         <br />
@@ -392,10 +875,10 @@
         @*#22*@
         <label style="font-size: 16px; font-weight: bold;">I like numbers more than words</label>
         <br />
-        <input id="22" type="radio" name="22" value="True" />
+        <input id="questionTwentyTwoTrue" type="radio" name="22" value="True" />
         <label for="22">True</label>
         <br />
-        <input id="22" type="radio" name="22" value="False" />
+        <input id="questionTwentyTwoFalse" type="radio" name="22" value="False" />
         <label for="22">False</label>
         <br />
         <br />
@@ -403,10 +886,10 @@
         @*#23*@
         <label style="font-size: 16px; font-weight: bold;">I work better alone</label>
         <br />
-        <input id="23" type="radio" name="23" value="True" />
+        <input id="questionTwentyThreeTrue" type="radio" name="23" value="True" />
         <label for="23">True</label>
         <br />
-        <input id="23" type="radio" name="23" value="False" />
+        <input id="questionTwentyThreeFalse" type="radio" name="23" value="False" />
         <label for="23">False</label>
         <br />
         <br />
@@ -414,10 +897,10 @@
         @*#24*@
         <label style="font-size: 16px; font-weight: bold;">I view myself as a good leader</label>
         <br />
-        <input id="24" type="radio" name="24" value="True" />
+        <input id="questionTwentyFourTrue" type="radio" name="24" value="True" />
         <label for="24">True</label>
         <br />
-        <input id="24" type="radio" name="24" value="False" />
+        <input id="questionTwentyFourFalse" type="radio" name="24" value="False" />
         <label for="24">False</label>
         <br />
         <br />
@@ -425,10 +908,10 @@
         @*#25*@
         <label style="font-size: 16px; font-weight: bold;">I am organized and tidy</label>
         <br />
-        <input id="25" type="radio" name="25" value="True" />
+        <input id="questionTwentyFiveTrue" type="radio" name="25" value="True" />
         <label for="25">True</label>
         <br />
-        <input id="25" type="radio" name="25" value="False" />
+        <input id="questionTwentyFiveFalse" type="radio" name="25" value="False" />
         <label for="25">False</label>
         <br />
         <br />
@@ -436,10 +919,10 @@
         @*#26*@
         <label style="font-size: 16px; font-weight: bold;">Difficult Puzzles are fun</label>
         <br />
-        <input id="26" type="radio" name="26" value="True" />
+        <input id="questionTwentySixTrue" type="radio" name="26" value="True" />
         <label for="26">True</label>
         <br />
-        <input id="26" type="radio" name="26" value="False" />
+        <input id="questionTwentySixFalse" type="radio" name="26" value="False" />
         <label for="26">False</label>
         <br />
         <br />
@@ -447,10 +930,10 @@
         @*#27*@
         <label style="font-size: 16px; font-weight: bold;">I am able to find small differences in a large area</label>
         <br />
-        <input id="27" type="radio" name="27" value="True" />
+        <input id="questionTwentySevenTrue" type="radio" name="27" value="True" />
         <label for="27">True</label>
         <br />
-        <input id="27" type="radio" name="27" value="False" />
+        <input id="questionTwentySevenFalse" type="radio" name="27" value="False" />
         <label for="27">False</label>
         <br />
         <br />
@@ -458,15 +941,15 @@
         @*#28*@
         <label style="font-size: 16px; font-weight: bold;">I enjoy helping others find solutions to their problems</label>
         <br />
-        <input id="28" type="radio" name="28" value="True" />
+        <input id="questionTwentyEightTrue" type="radio" name="28" value="True" />
         <label for="28">True</label>
         <br />
-        <input id="28" type="radio" name="28" value="False" />
+        <input id="questionTwentyEightFalse" type="radio" name="28" value="False" />
         <label for="28">False</label>
         <br />
         <br />
-
-        <a class="btn btn-outline-light py-3 px-4 rounded-pill" style="background-color: black;" asp-controller="Home" asp-action="SubmitSurvey">Submit</a>
+        <label>Determine your Personal Recommendation</label>
+        <input id="Score_Calc" type="submit" class="btn btn-outline-light py-3 px-4 rounded-pill" style="background-color: black;" value="Calculate Results"/>
         <br />
         <br />
     </form>
@@ -474,3 +957,6 @@
 
 <br />
 <br />
+
+<p id="Output"></p>
+
