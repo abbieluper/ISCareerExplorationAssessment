@@ -23,10 +23,18 @@ namespace ISCareerExploration.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult Survey()
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Survey(Result model) // I didn't have to name it model -- I could've named it anything
+        {
+            return View();
+        }
+
 
         public IActionResult Resources()
         {
