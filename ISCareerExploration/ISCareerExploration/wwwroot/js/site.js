@@ -440,15 +440,15 @@ $("#Score_Calc").click(function () {
     //    Other += 1
     //}
 
-    //if ($("#28").val() == "True") {
-    //    Consulting += 1
-    //}
-    //else if ($("#28").val() == "False") {
-    //    Consulting += 0
-    //}
-    //else {
-    //    Other += 1
-    //}
+    if ($("#28").val() == "True") {
+        Consulting += 1
+    }
+    else if ($("#28").val() == "False") {
+        Consulting += 0
+    }
+    else {
+        Other += 1
+    }
 
     if
         ((Dev > BI) &&
