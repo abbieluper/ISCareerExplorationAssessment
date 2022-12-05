@@ -15,29 +15,29 @@ $("#Score_Calc").click(function () {
 
    
 
-    if (document.getElementById("questionOne").value == "Tableau") {
+    if (document.getElementById("questionOneTab").checked) {
         BI += 1
     }
-    else if (document.getElementById("questionOneHTML").value == "HTML/CSS") {
+    else if (document.getElementById("questionOneHTML").checked) {
         Dev += 1
     }
-    else if (document.getElementById("questionOneVBA").value == "VBA") {
+    else if (document.getElementById("questionOneVBA").checked) {
         Dev += 1
     }
-    else if (document.getElementById("questionOneERD").value == "ERD") {
+    else if (document.getElementById("questionOneERD").checked) {
         Consulting += 1
     }
-    else if (document.getElementById("questionOneSec").value == "Security") {
+    else if (document.getElementById("questionOneSec").checked) {
         Dev += 1
     }
-    else if (document.getElementById("questionOneBI").value == "BI") {
+    else if (document.getElementById("questionOneBI").checked) {
         BI += 1
     }
     else {
         Other += 1
     }
-    console.log(document.getElementById("questionOneVBA").value)
-    console.log(document.getElementsByName("questionOne").value)
+    console.log(document.getElementById("questionOneVBA").checked)
+    console.log(document.getElementById("questionOneSec").checked)
     console.log(Management)
     console.log(Other)
     console.log(Dev)
