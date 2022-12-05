@@ -4,7 +4,7 @@
 }
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 
-@*@model SurveyModel;*@
+@model Result;
 
 <br />
 
@@ -493,7 +493,7 @@
 
 @*SURVEY*@
 <fieldset style="width: 700px;">
-    <form style="background-color: #F4F4F4; padding-left:18%; padding-top:10%;opacity: 0.8; width: 1100px; margin-bottom: auto; margin-left: auto; margin-right: auto; border-radius: 20px;" method="post">
+    <form onsubmit="return false;" style="background-color: #F4F4F4; padding-left:18%; padding-top:10%;opacity: 0.8; width: 1100px; margin-bottom: auto; margin-left: auto; margin-right: auto; border-radius: 20px;" method="post">
 
         <div asp-validation-summary="All"></div>
 

@@ -10,6 +10,5 @@ namespace ISCareerExploration.Models
         public string questionOne { get; set; }
         public string questionTwo { get; set; }
         public string questionThree { get; set; }
-
     }
 }
