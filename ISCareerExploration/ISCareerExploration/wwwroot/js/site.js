@@ -316,16 +316,16 @@ $("#Score_Calc").click(function () {
         Other += 1
     }
 
-    if (document.getElementById("questionEighteenNot").checked == "NotInterested"){
+    if (document.getElementById("questionEightteenNot").checked == "NotInterested"){
         BI += 0
     }
-    else if (document.getElementById("questionEighteenSlightly").checked == "SlightlyInterested"){
+    else if (document.getElementById("questionEightteenSlightly").checked == "SlightlyInterested"){
         BI += 0.25
     }
-    else if (document.getElementById("questionEighteenInterested").checked == "Interested"){
+    else if (document.getElementById("questionEightteenInterested").checked == "Interested"){
         BI += 0.75
     }
-    else if (document.getElementById("questionEighteenExtremely").checked == "ExtremelyInterested"){
+    else if (document.getElementById("questionEightteenExtremely").checked == "ExtremelyInterested"){
         BI += 1
     }
     else {
@@ -439,6 +439,13 @@ $("#Score_Calc").click(function () {
     else {
         Other += 1
     }
+    console.log(Dev)
+    console.log(BI)
+    console.log(Security)
+    console.log(Management)
+    console.log(Consulting)
+    console.log(IT)
+    console.log(Other)
 
     if
         ((Dev > BI) &&
