@@ -455,6 +455,7 @@ $("#Score_Calc").click(function () {
         (Dev > IT) &&
         (Dev > Other)) {
         recommendation = "Development"
+        route = "Development"
     }
 
     else if
@@ -464,6 +465,7 @@ $("#Score_Calc").click(function () {
         (BI > IT) &&
         (BI > Other)) {
         recommendation = "Business Intelligence/Analytics"
+        route = "BusinessIntelligence"
     }
     else if
         ((Security > Management) &&
@@ -471,27 +473,35 @@ $("#Score_Calc").click(function () {
         (Security > IT) &&
         (Security > Other)) {
         recommendation = "Security"
+        route = "Security"
     }
     else if
         ((Management > Consulting) &&
         (Management > IT) &&
         (Management > Other)) {
         recommendation = "Management"
+        route = "Management"
     }
     else if
         ((Consulting > IT) &&
         (Consulting > Other)) {
         recommendation = "Consulting"
+        route = "Consulting"
     }
     else if
         (IT > Other) {
         recommendation = "IT"
+        route = "InformationTechnology"
     }
     else {
         recommendation = "Other"
+        route = "Other"
     }
     finalOutput = "Your recommendation is: " + recommendation
-    document.getElementById("Output").innerHTML = finalOutput;
+    document.getElementById("Output").innerHTML = finalOutput + "<br>"
+    document.getElementById("buttonUrl").innerHTML = `<a style="background-color: #1b6ec2; padding: 10px 20px 10px 20px; color: white; border-radius: 10px; text-decoration: none;" href="/Home/${route}">Learn More about ${recommendation}</a>`
+
+
 });
 
 //finalOutput = "Your recommendation is: " + recommendation
