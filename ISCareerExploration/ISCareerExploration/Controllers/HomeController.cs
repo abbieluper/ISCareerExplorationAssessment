@@ -87,7 +87,7 @@ namespace ISCareerExploration.Controllers
         }
 
 
-        public IActionResult Consulting()
+        public IActionResult ConsultingNew()
         {
             return View();
         }
@@ -103,7 +103,7 @@ namespace ISCareerExploration.Controllers
         }
 
 
-        public IActionResult Other()
+        public IActionResult OtherNew()
         {
             return View();
         }
