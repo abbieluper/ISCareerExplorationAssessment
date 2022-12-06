@@ -490,7 +490,7 @@ $("#Score_Calc").click(function () {
     else {
         recommendation = "Other"
     }
-    finalOutput = "Your recommendation is: " + recommendation
+    finalOutput = "Your top recommendation is: " + recommendation
     document.getElementById("Output").innerHTML = finalOutput;
 });
 
