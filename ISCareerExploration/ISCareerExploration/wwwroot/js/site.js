@@ -499,10 +499,28 @@ $("#Score_Calc").click(function () {
     }
     finalOutput = "Your recommendation is: " + recommendation
     document.getElementById("Output").innerHTML = finalOutput + "<br>"
-    document.getElementById("buttonUrl").innerHTML = `<a style="background-color: #1b6ec2; padding: 10px 20px 10px 20px; color: white; border-radius: 10px; text-decoration: none;" href="/Home/${route}">Learn More about ${recommendation}</a>`
+    document.getElementById("buttonUrl").innerHTML = `<a class="btn btn-outline-light py-3 px-4 rounded-pill" style="background-color: #1b6ec2;" href="/Home/${route}">Learn More about ${recommendation}</a>     <button type="button" onclick="generatePDF()" class="btn btn-outline-light py-3 px-4 rounded-pill" style="background-color: darksalmon;">Export to PDF</button>`
 
 
 });
 
 //finalOutput = "Your recommendation is: " + recommendation
 //document.getElementById("Output").innerHTML = finalOutput;
+
+function generatePDF() {
+
+    // Choose the element id which you want to export.
+    var element = document.getElementById('divToExport');
+    element.style.width = '700px';
+    element.style.height = '900px';
+    var opt = {
+        margin: 0.5,
+        filename: 'results.pdf',
+        image: { type: 'jpeg', quality: 1 },
+        html2canvas: { scale: 1 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait', precision: '12' }
+    };
+
+    // choose the element and pass it to html2pdf() function and call the save() on it to save as pdf.
+    html2pdf().set(opt).from(element).save();
+}
