@@ -486,7 +486,7 @@ $("#Score_Calc").click(function () {
         ((Consulting > IT) &&
         (Consulting > Other)) {
         recommendation = "Consulting"
-        route = "Consulting"
+        route = "ConsultingNew"
     }
     else if
         (IT > Other) {
@@ -495,7 +495,7 @@ $("#Score_Calc").click(function () {
     }
     else {
         recommendation = "Other"
-        route = "Other"
+        route = "OtherNew"
     }
     finalOutput = "Your recommendation is: " + recommendation
     document.getElementById("Output").innerHTML = finalOutput + "<br>"
